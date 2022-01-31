@@ -1,5 +1,7 @@
 # Credit_Risk_Analysis
 ## Overview
+For this analysis, I created supervised machine learning models to assist in predicting credit risk. I tested six different methods including: Naive Random Oversampling, SMOTE Oversampling, Cluster Centroid Undersampling, SMOTEENN Sampling, Balanced Random Forest Classifying, and Easy Ensemble Classifying. I then evaluated my results of these models to make a recommendation on whether a certain model should be used to predict credit risk. 
+
 
 ## Results
 
@@ -52,3 +54,12 @@
 ![EE_Class](https://github.com/MeredithTracy/Credit_Risk_Analysis/blob/main/Images/EE_Class.png)
 
 ## Summary 
+
+Based on our results, we can see that the Easy Ensemble Classifier model has the highest recall for high risk loans at 92% followed by the SMOTEENN model at 76%. This means that it is a sensitive model so its detecting a majority of high risk loans that pass through it.  
+
+The Easy Ensemble Classifier model has the highest accuracy score at 93.2% followed by the Balanced Random Forest Classifer model at 68.3%. 
+
+Even though we had success with creating sensitive models, the only model that had good precision in catching high risk loans was the Balanced Random Forest Classifier model at 88%. 
+
+The models who did the best in sensitivity had low precision and the penalty for falsely labeling a low risk loan as high risk may not be worth it to a bank overall. If a bank plans on using this as a first step in looking at credit risk, the sensitive models would be great because we know we are catching the high risk loans that pass through. I would recommend the Easy Ensemble Model. 
+But if they are using this model as their only prediction for credit risk, I would not make a recommendation because the only one who scored highly on precision for high risk loans, doesn't have a good score sensitivity for high risk loans (37%) and its only has a 68.3% for accuracy. 
